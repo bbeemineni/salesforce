@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title ="Rendering and Looping">
+    <lightning-input type="checkbox" label= "Show Div tag" onchange ={showdiv}></lightning-input>
+    <template if:true ={divdisplay}>
+        <div>Checkbox is Checked</div>
+    </template>
+    <h2>This is for each syntax</h2>
+    <template for:each={cityList} for:item= "city">
+        <p key ={city}>{city}</p>
+    </template>
+    <h2>This is Iterator syntax</h2>
+    <template iterator:it ={cityList}>
+        <p key ={it.value}>{it.value}</p>
+    </template>
+</lightning-card>
+</template>

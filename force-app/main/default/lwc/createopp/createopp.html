@@ -1,0 +1,19 @@
+<template>
+       <lightning-quick-action-panel title="Create Opportunity">
+    <lightning-card title="Create Opportunity">
+        
+            <lightning-datatable
+            data={data}
+            columns={columns}
+            key-field="id"
+            onrowselection={getSelectedName}>
+        </lightning-datatable>
+       
+    </lightning-card>
+    <div slot="footer">
+        
+        <lightning-button variant="brand" label="Create Opportunity" onclick={createopportunity}></lightning-button>
+      </div>
+    
+</lightning-quick-action-panel> 
+</template>
